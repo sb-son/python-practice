@@ -108,3 +108,15 @@ numbers = [1, 2, 3, 4, 5]
 even_numbers = [num for num in numbers if num % 2 == 0]
 print(even_numbers)  # Output: [2, 4]
 
+print(4 * 2 % 5)
+
+def greater_value(x, y):
+    if x > y:
+        return x
+    else:
+       return y
+
+
+print(greater_value(10,3*5))
+
+print((10 >= 5*2) and (10 <= 5*2))
