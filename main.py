@@ -1,6 +1,6 @@
 # This is a sample Python script.
 import random
-
+import numpy as np
 
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
@@ -170,3 +170,66 @@ print(count_factors(3))  # Should count 2 factors (1x3)
 print(count_factors(10))  # Should count 4 factors (1x10, 2x5)
 print(count_factors(24))  # Should count 8 factors (1x24, 2x12, 3x8,
 # and 4x6).
+
+mon = 7
+tues = (mon + 6) % 2
+tues += 3
+wed = mon % 4
+thu = mon * 2 + 5
+wed = mon + 2 * tues
+tues = mon * wed
+print(tues)
+
+count = 0
+for i in range(150):
+    for j in range(30):
+        calc = i * j
+        if calc % 10 == 0:
+            count += 1
+
+print(count)
+
+numbers = [25, 50, 25, 50, 35, 45, 77, 21, 41, 10, 11, 22, 33, 40]
+print(numbers[numbers[9]])
+
+def fun(t, e, i):
+    ret = t[:i]
+    ret.append(e)
+    return ret + t[i:]
+
+lst = [8, 7, 3, 15, -4]
+print(fun(lst, 'foo', 3))
+
+weather = {
+    "coord": {
+        "lon": -78.64,
+        "lat": 35.78
+    },
+    "condition": "scattered clouds",
+    "main": {
+        "temp": 66.16,
+        "temp_min": 64,
+        "temp_max": 68
+    },
+    "wind": {
+        "speed": 9.17
+    },
+    "name": "Raleigh, NC"
+}
+
+np.poly1d([4, 3.1, -3.1, -1])
+
+def mystery(country, state=None):
+    new_word = ""
+    if state is not None:
+        for char in state:
+            if char not in ['a', 'e', 'i', 'o', 'u']:
+                new_word += char
+    else:
+        for char in country:
+            if char in ['a', 'e', 'i', 'o', 'u']:
+                new_word += char
+    return new_word
+
+print(mystery("United States", "Texas"))
+print(mystery("United States"))
