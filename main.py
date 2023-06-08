@@ -233,3 +233,20 @@ def mystery(country, state=None):
 
 print(mystery("United States", "Texas"))
 print(mystery("United States"))
+
+for left in range(7):
+    for right in range(left, 7):
+        print("[" + str(left) + "|" + str(right) + "]", end=" ")
+    print()
+
+teams = ['Dragons', 'Wolves', 'Pandas', 'Unicorns']
+for home_team in teams:
+    for away_team in teams:
+        if home_team != away_team:
+            print(home_team + " vs " + away_team)
+
+for n in range(6,18+1,3):
+    print(n*2)
+
+for n in range(10):
+    print(n+n)
