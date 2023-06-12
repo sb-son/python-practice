@@ -269,3 +269,13 @@ for n in range(10):
     print(digits(1000))  # Should print 4
     print(digits(0))  # Should print 1
 
+for count in range(1, 6):
+    print(count+1)
+
+for outer_loop in range(2, 6 + 1):
+    for inner_loop in range(outer_loop):
+        if inner_loop % 2 == 0:
+            print(inner_loop)
+
+weather = "Rainfall"
+print(weather[:4])
