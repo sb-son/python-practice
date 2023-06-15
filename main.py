@@ -300,3 +300,16 @@ my_list = []
 for x in range(1,11):
    my_list.append(x*2)
 print(my_list)
+
+
+wardrobe = {'shirt': ['red', 'blue', 'white'], 'jeans': ['blue', 'black']}
+new_items = {'jeans': ['white'], 'scarf': ['yellow'], 'socks': ['black', 'brown']}
+wardrobe.update(new_items)
+print(wardrobe)
+
+car_makes = ["Ford", "Volkswagen", "Toyota"]
+car_makes.remove("Ford")
+print(car_makes)
+
+speed_limits = {"street": 35, "highway": 65, "school": 15}
+print(speed_limits["highway"])
